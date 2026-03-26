@@ -10,6 +10,11 @@
         <button v-if="currentUser" class="link-btn" @click="handleLogout">退出登录</button>
       </nav>
     </header>
+
+    <div v-if="!isSupabaseReady" class="env-warning">
+      Supabase 未配置：请在 Vercel 项目中设置 `VITE_SUPABASE_URL` 和 `VITE_SUPABASE_ANON_KEY`。
+    </div>
+
     <main class="page-body">
       <RouterView />
     </main>
@@ -20,6 +25,7 @@
 import { computed } from "vue";
 import { useRouter, RouterLink, RouterView } from "vue-router";
 import { clearCurrentUser, getCurrentUser, roleToPortalPath } from "./lib/auth";
+import { isSupabaseReady } from "./lib/supabase";
 
 const router = useRouter();
 const currentUser = computed(() => getCurrentUser());
