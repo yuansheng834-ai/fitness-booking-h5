@@ -1,32 +1,17 @@
 <template>
   <section class="card">
-    <h2>H5 迁移已可用</h2>
-    <p class="muted">小程序代码已保留不变，H5 端已完成账号体系与三角色入口。</p>
+    <h2>欢迎使用健身约课系统</h2>
+    <p class="muted">请先登录或注册，系统会根据你的身份自动进入对应工作台。</p>
 
     <div class="entry-grid">
-      <RouterLink class="entry-card" to="/register">
-        <h3>/register</h3>
-        <p>会员注册</p>
-      </RouterLink>
-
       <RouterLink class="entry-card" to="/login">
-        <h3>/login</h3>
-        <p>账号登录</p>
+        <h3>登录</h3>
+        <p>已有账号，直接登录使用。</p>
       </RouterLink>
 
-      <RouterLink class="entry-card" to="/portal/member">
-        <h3>/portal/member</h3>
-        <p>会员工作台</p>
-      </RouterLink>
-
-      <RouterLink class="entry-card" to="/portal/coach">
-        <h3>/portal/coach</h3>
-        <p>教练工作台</p>
-      </RouterLink>
-
-      <RouterLink class="entry-card" to="/portal/admin">
-        <h3>/portal/admin</h3>
-        <p>管理员工作台</p>
+      <RouterLink class="entry-card" to="/register">
+        <h3>注册</h3>
+        <p>新用户注册后默认成为会员。</p>
       </RouterLink>
     </div>
   </section>
